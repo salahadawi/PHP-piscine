@@ -1,0 +1,144 @@
+body {
+	background: #505050;
+}
+
+header {
+	margin: auto;
+	width: 1800px;
+	height: 150px;
+	background: #909091;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#day-of-the-42 {
+	margin: 10px 20px;
+	width: 500px;
+	left: 200px;
+}
+
+#loupe {
+	margin-left: 975px;
+	position: relative;
+	bottom: -20px;
+}
+
+#center {
+	width: 1750px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#controls {
+	margin: 10px 10px 10px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#controls img {
+	width: 20px;
+}
+
+.left-bar, .box, .right-bar {
+	background: #909091;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+}
+
+.left-bar, .right-bar {
+	display: flex;
+	flex-direction: column;
+	width: 180px;
+	height: 500px;
+	padding: 10px 0px 20px;
+}
+
+.left-bar img, .right-bar img{
+	width: 90px;
+	margin: auto;
+}
+
+.right-bar {
+	justify-content: flex-start;
+}
+
+#oeil {
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
+#book {
+	position: relative;
+	top: -50px;
+}
+
+#towel {
+	position: relative;
+	top: -150px;
+}
+
+.box {
+	padding: 10px;
+	height: 700px;
+}
+
+.box img {
+	height: 700px;
+}
+
+button {
+	border-radius: 0px;
+}
+
+#bricks {
+	margin: 0px auto;
+	position: relative;
+	top: -200px;
+	width: 120px;
+	height: 70px;
+	background-image: url("resources/brick.jpg");
+	transform: scale(1.3);
+}
+
+p {
+	position: relative;
+	top: -10px;
+	font: 20px arial, sans-serif;
+}
+
+b {
+	font: 35px Georgia;
+}
+
+#italic {
+	position: relative;
+	top: -30px;
+}
+
+input {
+	position: relative;
+	top: -45px;
+	width: 415px;
+}
+
+button {
+	position: relative;
+	top: -45px;
+}
+
+#pop-up {
+	background: #8bff89;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	width: 500px;
+	height: 200px;
+	padding: 1px 40px 0px 10px;
+}
