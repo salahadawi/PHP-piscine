@@ -6,34 +6,41 @@
 			<img id="day-of-the-42" src="resources/day_of_the_42.png" alt="day-of-the-42-logo">
 			<img id="loupe" src="resources/loupe.png" alt="magnifying-glass-icon">
 			<div id="controls">
-				<img id="reload" src="resources/reload.png" alt="reload-icon">
-				<img id="close" src="resources/close.gif" alt="close-icon">
+				<a href="http://www.disney.com"><img id="reload" src="resources/reload.png" title="Start from the beginning" alt="Start from the beginning"></a>
+				<a href="http://www.relaischateaux.com"><img id="close" src="resources/close.gif" title="Disconnect" alt="Disconnect"></a>
 			</div>
 		</header>
 		<div id="center">
 			<div class="left-bar">
-				<img id="arrow" src="resources/arrow.png" alt="arrow-icon">
-				<img id="main" src="resources/main.png" alt="hand-icon">
-				<img id="oeil" src="resources/oeil.png" alt="eye-icon">
-				<img id="outil" src="resources/outil.png" alt="maintenance-icon">
-				<img id="chat-icon" src="resources/chat-icon.png" alt="chat-icon">
+				<img id="arrow" src="resources/arrow.png" title="Move" alt="Move">
+				<img id="main" src="resources/main.png" title="Take" alt="Take">
+				<img id="oeil" src="resources/oeil.png" title="Look" alt="Look">
+				<img id="outil" src="resources/outil.png" title="Use" alt="Use">
+				<img id="chat-icon" src="resources/chat-icon.png" title="Speak" alt="Speak">
+
 			</div>
 			<div class="box">
-				<img id="cluster" src="resources/cluster.jpg" alt="cluster-img">
+				<img id="cluster" src="resources/cluster.jpg" alt="cluster-img" usemap="#clustermap">
+				<map name="clustermap">
+					<area shape="rect" coords="383,370,585,700" href="http://www.ikea.com">
+					<area shape="rect" coords="900,350,1260,600" href="http://apple.com">
+				  </map>
 			</div>
 			<div class="right-bar">
-				<img id="book" src="resources/book.png" alt="book-icon">
-				<img id="towel" src="resources/towel.png" alt="towel-icon">
-				<div id="bricks">
+				<img id="book" src="resources/book.png" title="book-icon" alt="book-icon">
+				<img id="towel" src="resources/towel.png" title="towel-icon" alt="towel-icon">
+				<div id="bricks" title="bricks" alt="bricks">
 				</div>
 			</div>
 		</div>
-		<div id="pop-up">
-			<p>Vous <b>entrez</b> alors dans une grande piece remplie
-				<span style="text-shadow: 5px 5px 5px red;">d'ordinateurs</span>...</p>
-			<p id="italic">- <i>Bonjour, vous &ecirc;tes nouveau ici ?</i></p>
-			<input type="text" id="fname" name="fname">
-			<button type="button">Repondre</button>
+		<div id="bottom">
+			<div id="pop-up">
+				<p>Vous <b>entrez</b> alors dans une grande piece remplie <br />
+					d'<span style="text-shadow: 5px 5px 5px red;">ordinateurs</span>...</p>
+				<p id="italic">- <i>Bonjour, vous &ecirc;tes nouveau ici ?</i></p>
+				<input type="text" id="fname" name="fname">
+				<button type="button">Repondre</button>
+			</div>
 		</div>
 	</body>
 </html>

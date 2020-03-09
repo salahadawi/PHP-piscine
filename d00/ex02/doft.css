@@ -111,7 +111,7 @@ button {
 p {
 	position: relative;
 	top: -10px;
-	font: 20px arial, sans-serif;
+	font: 22px arial, sans-serif;
 }
 
 b {
@@ -125,20 +125,41 @@ b {
 
 input {
 	position: relative;
-	top: -45px;
-	width: 415px;
+	top: -50px;
+	width: 440px;
+	border: 2px solid;
+	margin-left: 5px;
+	height: 25px;
+	border-bottom-color: #eeeeee;
+	border-right-color: #eeeeee;
+	border-left-color: #9d969d;
+	border-top-color: #9d969d;
 }
 
 button {
 	position: relative;
-	top: -45px;
+	top: -50px;
+	margin: 5px;
+	font-size: 17px;
+	background: linear-gradient(#f0f0f0, #dcdcdc);
+	border: solid #9d969d 1px;
+	border-radius: 2px;
+	height: 25px;
 }
 
 #pop-up {
+	position: relative;
+	top: -90px;
+	left: -55px;
 	background: #8bff89;
 	border-radius: 10px;
 	box-shadow: 10px 10px 10px black;
-	width: 500px;
+	width: 585px;
 	height: 200px;
 	padding: 1px 40px 0px 10px;
+}
+
+#bottom {
+	margin: auto;
+	width: 1750px;
 }
