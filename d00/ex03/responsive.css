@@ -1,0 +1,66 @@
+body {
+	background: white;
+	color: black;
+}
+table, th, td {
+	border: 0.2vmin solid black;
+	border-collapse: collapse;
+	border-style: hidden;
+}
+.num, .weight {
+	font-size: 0.8vmin;
+}
+.num {
+	float: left;
+}
+.weight {
+	position: relative;
+	text-align: right;
+}
+td {
+	font-size: 3.2vmin;
+	text-align: center;
+	width: 60px;
+	height: 1vmin;
+}
+th {
+	font-size: 2vmin;
+}
+.empty {
+	border-style: hidden;
+}
+.nonmetal, .alkmetal, .alkearth, .tranmetal, .basicmetal,
+.metalloid, .halogen, .noblegas, .lanthanoid, .actinoid {
+	border-style: solid;
+}
+
+.nonmetal {
+	background: lightblue;
+}
+.alkmetal {
+	background: lightcoral;
+}
+.alkearth {
+	background: orange;
+}
+.tranmetal {
+	background: yellow;
+}
+.basicmetal {
+	background: lightgreen;
+}
+.metalloid {
+	background: green;
+}
+.halogen {
+	background: cyan;
+}
+.noblegas {
+	background: mediumslateblue;
+}
+.lanthanoid {
+	background: pink;
+}
+.actinoid {
+	background: darkmagenta;
+}
