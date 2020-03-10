@@ -1,11 +1,11 @@
 #!/usr/bin/php
 <?php
 
-$counter = 0;
-while ($counter < 1000)
+$i = 0;
+while ($i < 1000)
 {
 	echo("X");
-	$counter = $counter + 1;
+	$i = $i + 1;
 }
 echo("\n");
 ?>
