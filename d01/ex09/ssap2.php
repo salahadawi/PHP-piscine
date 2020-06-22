@@ -1,25 +1,41 @@
 #!/usr/bin/php
 <?php
 
-function sorting_rule ($arr)
+function check_whitespace($str)
 {
-	natcasesort($arr);
-	return ($arr);
+	return(($str));
 }
 
-function check_alpha ($str)
+function ft_split($str)
 {
-	return (ctype_alpha($str));
+	$arr = explode(" ", $str);
+	$arr = array_filter($arr, "check_whitespace");
+	return($arr);
 }
 
-function check_number ($str)
+function custom_sort($a, $b)
 {
-	return (is_numeric($str));
-}
-
-function check_other ($str)
-{
-	return (!(is_numeric($str)) && !(ctype_alpha($str)));
+	$size = (strlen($a) > strlen($b)) ? strlen($b) : strlen($a);
+	$a = strtolower($a);
+	$b = strtolower($b);
+	$i = 0;
+	while ($i < $size && $a[$i] == $b[$i])
+		$i++;
+	$a_char = ($i == strlen($a)) ? chr(0) : $a[$i];
+	$b_char = ($i == strlen($b)) ? chr(0) : $b[$i];
+	$a_ascii = ord($a_char);
+	$b_ascii = ord($b_char);
+	if ($a_ascii == 0 || $b_ascii == 0)
+		return ($a_ascii - $b_ascii);
+	if (!ctype_alpha($a_char))
+		$a_ascii += 1000;
+	if (!ctype_alnum($a_char))
+		$a_ascii += 2000;
+	if (!ctype_alpha($b_char))
+		$b_ascii += 1000;
+	if (!ctype_alnum($b_char))
+		$b_ascii += 2000;
+	return($a_ascii - $b_ascii);
 }
 
 if ($argc > 1)
@@ -28,19 +44,12 @@ if ($argc > 1)
 	$arr = array();
 	while ($count < $argc)
 	{
-		$arr = array_merge($arr, explode(" ", $argv[$count]));
+		$arr = array_merge($arr, ft_split($argv[$count]));
 		$count++;
 	}
-	$arr1 = array_filter($arr, "check_alpha");
-	$arr2 = array_filter($arr, "check_number");
-	$arr3 = array_filter($arr, "check_other");
-	natcasesort($arr1);
-	sort($arr2, 2);
-	sort($arr3);
-	$arr1 = array_values($arr1);
-	$arr = array_merge($arr1, $arr2, $arr3);
+	usort($arr, "custom_sort");
 	$count = 0;
-	while ($arr[$count])
+	while ($count < count($arr))
 	{
 		print($arr[$count]."\n");
 		$count++;
