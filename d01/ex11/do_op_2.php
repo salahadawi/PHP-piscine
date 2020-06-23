@@ -8,16 +8,37 @@ function check_whitespace($str)
 
 if ($argc == 2)
 {
-	$arr = array_filter(explode(" ", $argv[1]), "check_whitespace");
-	$arr = array_values($arr);
-	if (count($arr) != 3)
+	if (strpos($argv[1], '+'))
+		$op = '+';
+	else if (strpos($argv[1], '*'))
+		$op = '*';
+	else if (strpos($argv[1], '-'))
+		$op = '-';
+	else if (strpos($argv[1], '/'))
+		$op = '/';
+	else if (strpos($argv[1], '%'))
+		$op = '%';
+	else
 	{
 		print ("Syntax Error\n");
 		return ;
 	}
-	$num1 = $arr[0];
-	$op = $arr[1];
-	$num2 = $arr[2];
+	$arr = explode($op, $argv[1]);
+	if (count($arr) != 2)
+	{
+		print ("Syntax Error\n");
+		return ;
+	}
+	if (!is_numeric($num1 = trim($arr[0])))
+	{
+		print ("Syntax Error\n");
+		return ;
+	}
+	if (!is_numeric($num2 = trim($arr[1])))
+	{
+		print ("Syntax Error\n");
+		return ;
+	}
 	if ($op == "+")
 		print ($num1 + $num2);
 	else if ($op == "-")
@@ -41,6 +62,11 @@ if ($argc == 2)
 			return ;
 		}
 		print ($num1 % $num2);
+	}
+	else
+	{
+		print ("Syntax Error\n");
+		return ;
 	}
 	print("\n");
 }
