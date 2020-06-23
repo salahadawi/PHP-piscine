@@ -14,10 +14,9 @@ if ($argc > 1)
 		$count++;
 	}
 	$arr = array_combine($arrkey, $arrval);
-	print($arr[$argv[1]]);
+	if (array_key_exists($argv[1], $arr))
+		print($arr[$argv[1]]);
 	if (array_key_exists($argv[1], $arr))
 		print("\n");
 }
-else
-	print("Incorrect Parameters\n")
 ?>
