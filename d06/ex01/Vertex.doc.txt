@@ -1,0 +1,23 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles a point in space.
+
+An instance can be contructed from 3 coordinates:
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+An additional optional coordinate and a color can also be specified:
+new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0, 'color' => $green ) );
+
+Red, green, blue constitutives and RGB values are converted to intergers.
+Negative or > to 255 color constitutives are left as is.
+Any other use is undefined behaviour.
+
+The class provides the following methods for each attribute:
+
+Vertex getX()
+Returns the specified attribute.
+
+Vertex setX($new_x)
+Sets the specified attribute to a new value.
+
+Replace "X" with "Y", "Z", "W", or "Color" to access other attributes.
+---------------------------------------------------------------------- Vertex ->
