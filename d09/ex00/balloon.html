@@ -1,0 +1,51 @@
+<style>
+	body, html {
+		height: 100%;
+		display: grid;
+}
+	#balloon {
+		height: 200px;
+		width: 200px;
+		background: red;
+		border-radius: 100%;
+		top: 50%;
+		margin: auto;
+		vertical-align: middle;
+	}
+</style>
+<script>
+	var size = 200;
+	var clicked = 0;
+	var colors = ["red", "green", "blue"];
+	var color_index = 0;
+	function handleClick() {
+		size += 10;
+		if (size > 420)
+		{
+			console.log("Pop!");
+			size = 200;
+		}
+		document.getElementById("balloon").style.height=size + "px";
+		document.getElementById("balloon").style.width=size + "px";
+		document.getElementById("balloon").style.background=colors[++color_index % colors.length];
+		clicked = 1;
+		console.log(size);
+	}
+	function handleOver() {
+		clicked = 0;
+	}
+	function handleOut() {
+		if (!clicked && size >= 205)
+		{
+			size -= 5;
+			document.getElementById("balloon").style.height=size + "px";
+			document.getElementById("balloon").style.width=size + "px";
+			document.getElementById("balloon").style.background=colors[--color_index % colors.length];
+			console.log(size);
+		}
+	}
+	</script>
+<html>
+<div id="balloon" onclick="handleClick()" onmouseout="handleOut()" onmouseover="handleOver()">
+</div>
+</html>

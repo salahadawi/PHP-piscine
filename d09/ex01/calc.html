@@ -1,0 +1,47 @@
+<script>
+	var left = 0;
+	var right = 0;
+	var op = "+";
+	
+	function setInput(id) {
+		if (id == "left")
+			left = document.getElementById(id).value
+		if (id == "right")
+			right = document.getElementById(id).value
+		if (id == "op")
+			op = document.getElementById(id).value
+	}
+	function handleSubmit() {
+		if (!(Number.isInteger(+left) && +left >= 0 && Number.isInteger(+right) && +right >= 0))
+			alert("Error :(");
+		else if ((op == "/" || op == "%") && right == 0)
+		{
+			alert("It's over 9000!");
+			console.log("It's over 9000!");
+		}
+		else
+		{
+			alert(eval(left + op + right));
+			console.log(eval(left + op + right));
+		}
+	}
+
+	setInterval(function() { 
+		alert("Please, use me...");
+	}, 30000);
+</script>
+<html>
+	<form action="" id="calc">
+		<input type="text" id="left" onchange="setInput('left')">
+		<select id="op" onchange="setInput('op')">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="right" onchange="setInput('right')">
+		<input type="button" id="submit" value="Try me!" onclick="handleSubmit()">
+	</form>
+</div>
+</html>
