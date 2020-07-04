@@ -18,6 +18,13 @@
 	var clicked = 0;
 	var colors = ["red", "green", "blue"];
 	var color_index = 0;
+
+	function abs(n) {
+		if (n < 0)
+			n = -n;
+		return (n);
+	}
+
 	function handleClick() {
 		size += 10;
 		if (size > 420)
@@ -27,7 +34,7 @@
 		}
 		document.getElementById("balloon").style.height=size + "px";
 		document.getElementById("balloon").style.width=size + "px";
-		document.getElementById("balloon").style.background=colors[++color_index % colors.length];
+		document.getElementById("balloon").style.background=colors[abs(++color_index) % colors.length];
 		clicked = 1;
 		console.log(size);
 	}
@@ -40,7 +47,7 @@
 			size -= 5;
 			document.getElementById("balloon").style.height=size + "px";
 			document.getElementById("balloon").style.width=size + "px";
-			document.getElementById("balloon").style.background=colors[--color_index % colors.length];
+			document.getElementById("balloon").style.background=colors[abs(--color_index) % colors.length];
 			console.log(size);
 		}
 	}

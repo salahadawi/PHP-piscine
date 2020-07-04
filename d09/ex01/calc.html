@@ -1,6 +1,6 @@
 <script>
-	var left = 0;
-	var right = 0;
+	var left = null;
+	var right = null;
 	var op = "+";
 	
 	function setInput(id) {
@@ -12,7 +12,7 @@
 			op = document.getElementById(id).value
 	}
 	function handleSubmit() {
-		if (!(Number.isInteger(+left) && +left >= 0 && Number.isInteger(+right) && +right >= 0))
+		if (!(left !== null && right !== null && Number.isInteger(+left) && +left >= 0 && Number.isInteger(+right) && +right >= 0))
 			alert("Error :(");
 		else if ((op == "/" || op == "%") && right == 0)
 		{
